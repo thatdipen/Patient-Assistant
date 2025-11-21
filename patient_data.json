@@ -1,0 +1,509 @@
+{
+  "meta": {
+    "generated_on": "2025-01-15",
+    "description": "Patient support dataset covering education, adherence, symptoms, journey mapping, and support programs"
+  },
+  "patient_education": {
+    "diabetes": {
+      "disease_name": "Diabetes",
+      "overview": "Diabetes is a chronic condition where the body cannot properly process glucose (sugar) in the blood. There are two main types: Type 1 and Type 2.",
+      "key_facts": [
+        "Type 1 diabetes is an autoimmune condition where the body doesn't produce insulin",
+        "Type 2 diabetes occurs when the body becomes resistant to insulin or doesn't produce enough",
+        "Common symptoms include increased thirst, frequent urination, fatigue, and blurred vision"
+      ],
+      "medications": [
+        {
+          "name": "Metformin",
+          "purpose": "Helps lower blood sugar levels by reducing glucose production in the liver",
+          "common_brands": ["Glucophage", "GlucoSafe"],
+          "important_notes": "Take with meals to reduce stomach upset. Avoid alcohol while taking this medication."
+        },
+        {
+          "name": "Insulin",
+          "purpose": "Helps cells absorb glucose from the bloodstream",
+          "types": ["Rapid-acting", "Long-acting", "Intermediate-acting"],
+          "important_notes": "Must be stored in refrigerator. Rotate injection sites to prevent skin problems."
+        }
+      ],
+      "lifestyle_tips": [
+        "Monitor blood sugar levels regularly as advised by your doctor",
+        "Follow a balanced diet with controlled carbohydrate intake",
+        "Engage in regular physical activity (at least 150 minutes per week)",
+        "Maintain a healthy weight",
+        "Get regular check-ups and eye exams"
+      ],
+      "when_to_seek_help": [
+        "Blood sugar levels consistently too high or too low",
+        "Signs of infection (fever, wounds that won't heal)",
+        "Vision changes",
+        "Numbness or tingling in hands or feet",
+        "Severe symptoms like confusion or loss of consciousness"
+      ]
+    },
+    "hypertension": {
+      "disease_name": "Hypertension (High Blood Pressure)",
+      "overview": "Hypertension is a condition where the force of blood against artery walls is consistently too high, which can lead to serious health problems.",
+      "key_facts": [
+        "Often called the 'silent killer' because it may have no symptoms",
+        "Normal blood pressure is below 120/80 mmHg",
+        "Risk factors include age, family history, obesity, and lifestyle factors"
+      ],
+      "medications": [
+        {
+          "name": "ACE Inhibitors",
+          "purpose": "Relax blood vessels to lower blood pressure",
+          "common_brands": ["Lisinopril", "Enalapril"],
+          "important_notes": "May cause dry cough. Avoid potassium supplements unless prescribed."
+        },
+        {
+          "name": "Beta Blockers",
+          "purpose": "Reduce heart rate and blood pressure",
+          "common_brands": ["Atenolol", "Metoprolol"],
+          "important_notes": "Don't stop suddenly - taper off gradually. May cause fatigue initially."
+        }
+      ],
+      "lifestyle_tips": [
+        "Reduce sodium intake (aim for less than 2,300 mg per day)",
+        "Eat a diet rich in fruits, vegetables, and whole grains",
+        "Limit alcohol consumption",
+        "Exercise regularly (at least 30 minutes most days)",
+        "Manage stress through relaxation techniques",
+        "Maintain a healthy weight"
+      ],
+      "when_to_seek_help": [
+        "Blood pressure readings consistently above 180/120",
+        "Severe headache, chest pain, or shortness of breath",
+        "Vision problems",
+        "Irregular heartbeat",
+        "Dizziness or confusion"
+      ]
+    },
+    "asthma": {
+      "disease_name": "Asthma",
+      "overview": "Asthma is a chronic lung condition that causes airways to become inflamed and narrow, making breathing difficult.",
+      "key_facts": [
+        "Symptoms can be triggered by allergens, exercise, cold air, or stress",
+        "Common symptoms include wheezing, coughing, chest tightness, and shortness of breath",
+        "Asthma can be managed effectively with proper medication and lifestyle adjustments"
+      ],
+      "medications": [
+        {
+          "name": "Inhaled Corticosteroids",
+          "purpose": "Reduce inflammation in airways (preventive medication)",
+          "common_brands": ["Fluticasone", "Budesonide"],
+          "important_notes": "Rinse mouth after use to prevent oral thrush. Use daily even when feeling well."
+        },
+        {
+          "name": "Bronchodilators",
+          "purpose": "Quickly open airways during an asthma attack (rescue medication)",
+          "common_brands": ["Albuterol", "Salbutamol"],
+          "important_notes": "Carry with you at all times. Use as needed for symptoms. If using more than twice a week, see your doctor."
+        }
+      ],
+      "lifestyle_tips": [
+        "Identify and avoid your asthma triggers",
+        "Use a peak flow meter to monitor lung function",
+        "Keep rescue inhaler accessible at all times",
+        "Create an asthma action plan with your doctor",
+        "Get annual flu and pneumonia vaccines",
+        "Maintain good indoor air quality"
+      ],
+      "when_to_seek_help": [
+        "Rescue inhaler not providing relief",
+        "Symptoms worsening despite medication",
+        "Peak flow readings in red zone",
+        "Difficulty speaking due to shortness of breath",
+        "Lips or fingernails turning blue",
+        "Severe chest pain"
+      ]
+    },
+    "depression": {
+      "disease_name": "Depression",
+      "overview": "Depression is a mental health condition characterized by persistent feelings of sadness, hopelessness, and loss of interest in activities.",
+      "key_facts": [
+        "Depression affects how you feel, think, and handle daily activities",
+        "It's a medical condition, not a personal weakness",
+        "Treatment typically includes medication, therapy, or both"
+      ],
+      "medications": [
+        {
+          "name": "SSRIs (Selective Serotonin Reuptake Inhibitors)",
+          "purpose": "Increase levels of serotonin in the brain",
+          "common_brands": ["Sertraline", "Fluoxetine", "Escitalopram"],
+          "important_notes": "May take 4-6 weeks to see full effects. Don't stop abruptly. May cause initial side effects that usually improve."
+        },
+        {
+          "name": "SNRIs (Serotonin-Norepinephrine Reuptake Inhibitors)",
+          "purpose": "Affect both serotonin and norepinephrine",
+          "common_brands": ["Venlafaxine", "Duloxetine"],
+          "important_notes": "Similar to SSRIs but may help with both depression and anxiety. Follow doctor's instructions carefully."
+        }
+      ],
+      "lifestyle_tips": [
+        "Stick to a regular sleep schedule",
+        "Engage in regular physical activity",
+        "Eat a balanced diet",
+        "Stay connected with friends and family",
+        "Practice stress-reduction techniques",
+        "Avoid alcohol and recreational drugs",
+        "Set small, achievable goals"
+      ],
+      "when_to_seek_help": [
+        "Thoughts of self-harm or suicide (seek immediate help)",
+        "Symptoms not improving after several weeks of treatment",
+        "Severe side effects from medication",
+        "Difficulty functioning in daily life",
+        "Substance use to cope with symptoms"
+      ]
+    }
+  },
+  "adherence_tools": {
+    "medication_reminders": {
+      "tips": [
+        "Set phone alarms or use medication reminder apps",
+        "Use a pill organizer with days of the week",
+        "Link medication to daily routines (e.g., with breakfast, before bed)",
+        "Keep a medication log to track when you take each dose",
+        "Ask family members to help remind you if needed"
+      ],
+      "common_challenges": [
+        "Forgetting to take medication",
+        "Complex medication schedules",
+        "Side effects making you want to skip doses",
+        "Cost concerns",
+        "Feeling better and thinking you don't need medication"
+      ],
+      "solutions": [
+        "Use technology: apps, alarms, smart pill dispensers",
+        "Simplify schedule: ask doctor if medications can be taken together",
+        "Discuss side effects with doctor - they may adjust dosage or switch medications",
+        "Ask about generic alternatives or patient assistance programs",
+        "Remember: medications work best when taken consistently, even when feeling well"
+      ]
+    },
+    "medication_tracking": {
+      "what_to_track": [
+        "Date and time of each dose",
+        "Any side effects experienced",
+        "Symptoms before and after taking medication",
+        "Missed doses and reasons",
+        "Questions or concerns for your doctor"
+      ],
+      "tracking_methods": [
+        "Medication diary or journal",
+        "Mobile apps designed for medication tracking",
+        "Calendar or planner",
+        "Simple checklist on your phone"
+      ]
+    },
+    "improving_adherence": {
+      "strategies": [
+        "Understand why each medication is important for your health",
+        "Ask your doctor or pharmacist to explain how to take medications correctly",
+        "Discuss any concerns or barriers with your healthcare team",
+        "Set up automatic prescription refills",
+        "Keep medications in a visible, accessible location (but safe from children)",
+        "Review your medication list regularly with your doctor"
+      ]
+    }
+  },
+  "symptom_tracking": {
+    "common_symptoms": {
+      "diabetes": {
+        "symptoms_to_track": [
+          "Blood sugar readings (fasting and after meals)",
+          "Frequency of urination",
+          "Thirst levels",
+          "Energy levels throughout the day",
+          "Vision changes",
+          "Foot numbness or tingling",
+          "Wound healing time"
+        ],
+        "tracking_frequency": "Daily for blood sugar, weekly for other symptoms",
+        "red_flags": [
+          "Blood sugar consistently above 250 mg/dL or below 70 mg/dL",
+          "Ketones in urine",
+          "Severe dehydration",
+          "Confusion or difficulty thinking clearly"
+        ]
+      },
+      "hypertension": {
+        "symptoms_to_track": [
+          "Blood pressure readings (morning and evening)",
+          "Headaches",
+          "Dizziness or lightheadedness",
+          "Chest pain or discomfort",
+          "Shortness of breath",
+          "Vision changes"
+        ],
+        "tracking_frequency": "Daily for blood pressure, as needed for symptoms",
+        "red_flags": [
+          "Blood pressure above 180/120",
+          "Severe headache with high blood pressure",
+          "Chest pain",
+          "Difficulty breathing"
+        ]
+      },
+      "asthma": {
+        "symptoms_to_track": [
+          "Peak flow meter readings",
+          "Frequency of rescue inhaler use",
+          "Coughing episodes",
+          "Wheezing",
+          "Chest tightness",
+          "Sleep disruption due to breathing",
+          "Activity limitations"
+        ],
+        "tracking_frequency": "Daily for peak flow, daily for symptom diary",
+        "red_flags": [
+          "Rescue inhaler needed more than twice a week",
+          "Peak flow in red zone",
+          "Symptoms not improving with medication",
+          "Difficulty speaking due to breathlessness"
+        ]
+      },
+      "depression": {
+        "symptoms_to_track": [
+          "Mood levels (1-10 scale)",
+          "Sleep quality and duration",
+          "Appetite changes",
+          "Energy levels",
+          "Interest in activities",
+          "Concentration and focus",
+          "Thoughts of self-harm or suicide"
+        ],
+        "tracking_frequency": "Daily mood check, weekly comprehensive review",
+        "red_flags": [
+          "Thoughts of self-harm or suicide (seek immediate help)",
+          "Severe mood changes",
+          "Inability to function in daily life",
+          "Psychotic symptoms (hallucinations, delusions)"
+        ]
+      }
+    },
+    "symptom_diary_template": {
+      "date": "YYYY-MM-DD",
+      "time": "HH:MM",
+      "symptom": "Description of symptom",
+      "severity": "Mild/Moderate/Severe (1-10 scale)",
+      "triggers": "What might have caused it",
+      "actions_taken": "What you did to manage it",
+      "effectiveness": "Did it help? Yes/No/Partially"
+    }
+  },
+  "patient_journey": {
+    "diabetes_journey": {
+      "diagnosis": {
+        "stage": "Diagnosis",
+        "typical_duration": "First 1-2 weeks",
+        "key_milestones": [
+          "Receiving diagnosis from healthcare provider",
+          "Understanding what diabetes means",
+          "Initial blood sugar monitoring setup",
+          "First medication prescription"
+        ],
+        "support_needed": [
+          "Education about diabetes basics",
+          "Emotional support and reassurance",
+          "Help setting up monitoring equipment",
+          "Nutrition counseling"
+        ]
+      },
+      "initial_treatment": {
+        "stage": "Initial Treatment",
+        "typical_duration": "First 1-3 months",
+        "key_milestones": [
+          "Starting medication regimen",
+          "Establishing blood sugar monitoring routine",
+          "Learning to recognize symptoms",
+          "First follow-up appointment"
+        ],
+        "support_needed": [
+          "Medication adherence support",
+          "Lifestyle modification guidance",
+          "Problem-solving for challenges",
+          "Regular check-ins with healthcare team"
+        ]
+      },
+      "stabilization": {
+        "stage": "Stabilization",
+        "typical_duration": "3-6 months",
+        "key_milestones": [
+          "Blood sugar levels becoming more stable",
+          "Feeling more confident in self-management",
+          "Establishing sustainable routines",
+          "Reduced frequency of symptoms"
+        ],
+        "support_needed": [
+          "Continued monitoring and adjustment",
+          "Advanced education (complications prevention)",
+          "Long-term goal setting",
+          "Peer support groups"
+        ]
+      },
+      "long_term_management": {
+        "stage": "Long-term Management",
+        "typical_duration": "Ongoing",
+        "key_milestones": [
+          "Consistent medication adherence",
+          "Regular preventive care (eye exams, foot care)",
+          "Maintaining healthy lifestyle",
+          "Annual comprehensive check-ups"
+        ],
+        "support_needed": [
+          "Ongoing education and updates",
+          "Complication screening",
+          "Lifestyle maintenance support",
+          "Community and peer connections"
+        ]
+      }
+    },
+    "hypertension_journey": {
+      "diagnosis": {
+        "stage": "Diagnosis",
+        "typical_duration": "First week",
+        "key_milestones": [
+          "High blood pressure reading confirmed",
+          "Understanding risk factors",
+          "Initial lifestyle recommendations",
+          "Medication prescription if needed"
+        ],
+        "support_needed": [
+          "Education about hypertension",
+          "Blood pressure monitoring training",
+          "Lifestyle modification guidance"
+        ]
+      },
+      "treatment_initiation": {
+        "stage": "Treatment Initiation",
+        "typical_duration": "First 1-2 months",
+        "key_milestones": [
+          "Starting medication",
+          "Establishing monitoring routine",
+          "Making lifestyle changes",
+          "First follow-up to check progress"
+        ],
+        "support_needed": [
+          "Medication adherence support",
+          "Diet and exercise guidance",
+          "Stress management techniques"
+        ]
+      },
+      "control_achievement": {
+        "stage": "Achieving Control",
+        "typical_duration": "2-6 months",
+        "key_milestones": [
+          "Blood pressure reaching target range",
+          "Medication adjustments if needed",
+          "Lifestyle changes becoming routine",
+          "Reduced risk of complications"
+        ],
+        "support_needed": [
+          "Maintenance strategies",
+          "Continued monitoring",
+          "Prevention education"
+        ]
+      }
+    }
+  },
+  "support_programs": {
+    "diabetes_support": {
+      "programs": [
+        {
+          "name": "Diabetes Self-Management Education (DSME)",
+          "description": "Structured program to help patients learn diabetes self-care skills",
+          "benefits": [
+            "Learn to monitor blood sugar",
+            "Understand medication management",
+            "Develop meal planning skills",
+            "Learn to prevent complications"
+          ],
+          "duration": "Typically 6-10 hours over several sessions",
+          "eligibility": "Anyone with diabetes or prediabetes"
+        },
+        {
+          "name": "Diabetes Support Groups",
+          "description": "Peer support groups for people living with diabetes",
+          "benefits": [
+            "Share experiences and tips",
+            "Emotional support",
+            "Learn from others' experiences",
+            "Reduce feelings of isolation"
+          ],
+          "duration": "Ongoing, typically monthly meetings",
+          "eligibility": "Open to all people with diabetes and their families"
+        }
+      ],
+      "online_resources": [
+        "American Diabetes Association website",
+        "Diabetes education apps",
+        "Online forums and communities",
+        "Telehealth diabetes management programs"
+      ]
+    },
+    "mental_health_support": {
+      "programs": [
+        {
+          "name": "Cognitive Behavioral Therapy (CBT)",
+          "description": "Evidence-based therapy to help change negative thought patterns",
+          "benefits": [
+            "Learn coping strategies",
+            "Identify and change negative thoughts",
+            "Develop problem-solving skills",
+            "Improve mood and functioning"
+          ],
+          "duration": "Typically 12-20 sessions",
+          "eligibility": "Anyone with depression, anxiety, or other mental health conditions"
+        },
+        {
+          "name": "Peer Support Groups",
+          "description": "Groups led by people with lived experience of mental health conditions",
+          "benefits": [
+            "Shared understanding",
+            "Practical advice",
+            "Reduced stigma",
+            "Hope and inspiration"
+          ],
+          "duration": "Ongoing, typically weekly or bi-weekly",
+          "eligibility": "Open to people with mental health conditions"
+        }
+      ],
+      "crisis_resources": [
+        "988 Suicide & Crisis Lifeline (24/7)",
+        "Crisis Text Line: Text HOME to 741741",
+        "Emergency services: 911",
+        "Local mental health crisis centers"
+      ]
+    },
+    "general_health_support": {
+      "programs": [
+        {
+          "name": "Chronic Disease Self-Management Program (CDSMP)",
+          "description": "Workshop for people with chronic health conditions",
+          "benefits": [
+            "Learn self-management skills",
+            "Set and achieve health goals",
+            "Manage symptoms and medications",
+            "Improve communication with healthcare providers"
+          ],
+          "duration": "6 weekly sessions, 2.5 hours each",
+          "eligibility": "Adults with any chronic health condition"
+        },
+        {
+          "name": "Medication Therapy Management (MTM)",
+          "description": "Service to help patients get the most benefit from medications",
+          "benefits": [
+            "Review all medications",
+            "Identify potential problems",
+            "Optimize medication effectiveness",
+            "Reduce medication-related issues"
+          ],
+          "duration": "Annual review with follow-ups as needed",
+          "eligibility": "People taking multiple medications or with complex conditions"
+        }
+      ]
+    }
+  }
+}
+
