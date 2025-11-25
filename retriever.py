@@ -10,7 +10,7 @@ client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 # ChromaDB setup
 CHROMA_DB_PATH = os.getenv("CHROMA_DB_PATH", "./patient_chroma_db")
-CHROMA_COLLECTION_NAME = os.getenv("CHROMA_COLLECTION_NAME", "patient-support-vectors")
+CHROMA_COLLECTION_NAME = os.getenv("CHROMA_COLLECTION_NAME", "patient-vectors")
 EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL", "text-embedding-3-small")
 
 def get_embedding(text, model=None):
@@ -21,15 +21,8 @@ def get_embedding(text, model=None):
     response = client.embeddings.create(input=text, model=model)
     return response.data[0].embedding
 
-def retrieve_similar_chunks(query, top_k=5, filter_metadata=None):
-    """
-    Retrieve top-k similar chunks for the given query using ChromaDB.
-    
-    Args:
-        query: The search query string
-        top_k: Number of results to return
-        filter_metadata: Optional dict to filter by metadata (e.g., {"type": "patient_education"})
-    """
+def retrieve_similar_chunks(query, top_k=3):
+    """Retrieve top-k similar chunks for the given query using ChromaDB."""
     # Check if ChromaDB path exists
     if not os.path.exists(CHROMA_DB_PATH):
         raise ValueError(f"ChromaDB path not found: {CHROMA_DB_PATH}. Please run vector_store.py first to create the database.")
@@ -48,19 +41,12 @@ def retrieve_similar_chunks(query, top_k=5, filter_metadata=None):
     except Exception as e:
         raise ValueError(f"Collection '{CHROMA_COLLECTION_NAME}' not found. Please run vector_store.py first to create the collection. Error: {e}")
     
-    # Build query parameters
-    query_params = {
-        "query_embeddings": [query_embedding],
-        "n_results": top_k,
-        "include": ["documents", "metadatas", "distances"]
-    }
-    
-    # Add metadata filter if provided
-    if filter_metadata:
-        query_params["where"] = filter_metadata
-    
     # Query ChromaDB for similar vectors
-    results = collection.query(**query_params)
+    results = collection.query(
+        query_embeddings=[query_embedding],
+        n_results=top_k,
+        include=["documents", "metadatas", "distances"]
+    )
     
     # Format results to match the original structure
     chunks = []
@@ -77,14 +63,15 @@ def retrieve_similar_chunks(query, top_k=5, filter_metadata=None):
             distance = distances[i] if i < len(distances) else 1.0
             similarity = 1.0 - distance  # Convert distance to similarity
             
-            # Get text from document
+            # Get text from document or metadata
             text = doc
+            if not text and metadatas and i < len(metadatas):
+                # Fallback to metadata text if document is empty
+                text = metadatas[i].get("text", "")
             
             chunks.append({
                 "text": text,
-                "similarity": float(similarity),
-                "metadata": metadatas[i] if i < len(metadatas) else {}
+                "similarity": float(similarity)
             })
     
     return chunks
-
